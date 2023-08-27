@@ -1,13 +1,15 @@
 # MERN Stack Project
 
-This is a simple MERN (MongoDB, Express.js, React, Node.js) stack project template. It demonstrates the use of the MERN stack to build a web application. This README provides an overview of the project structure and the key dependencies used in both the frontend (React) and backend (Node.js) components.
+This is a simple MERN (MongoDB, Express.js, React, Node.js) stack project template. It demonstrates the use of the MERN stack to build a web application. This README provides an overview of the project structure, dependencies, and instructions on how to run the code locally.
 
 ## Table of Contents
 
 - [Project Structure](#project-structure)
 - [Frontend Dependencies](#frontend-dependencies)
 - [Backend Dependencies](#backend-dependencies)
-- [Usage](#usage)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
 - [Styling](#styling)
 
 ## Project Structure
@@ -53,19 +55,51 @@ The backend of this MERN project relies on the following key dependencies:
 
 These dependencies are essential for building the server, defining routes, interacting with the database, and ensuring secure authentication.
 
-## Usage
+## Getting Started
 
-To run this MERN stack project:
+To run this MERN stack project locally, follow these steps:
 
-1. **Frontend**:
-   - Navigate to the frontend directory.
-   - Install frontend dependencies using `npm install`.
-   - Start the development server using `npm start`.
+### Prerequisites
 
-2. **Backend**:
-   - Navigate to the server directory.
-   - Install backend dependencies using `npm install`.
-   - Start the Node.js server in development mode using `npm run dev`.
+- Node.js and npm should be installed on your machine.
+- MongoDB should be installed and running. Configure the database connection in the backend.
+
+### Installation
+
+1. **Clone the Repository**:
+   - Clone this GitHub repository to your local machine.
+
+2. **Frontend Setup**:
+   - Navigate to the frontend directory using your terminal.
+   - Install frontend dependencies by running:
+
+     ```bash
+     npm install
+     ```
+
+   - Start the development server with:
+
+     ```bash
+     npm start
+     ```
+
+   - The frontend will be available at [http://localhost:3000](http://localhost:3000).
+
+3. **Backend Setup**:
+   - Navigate to the server directory using your terminal.
+   - Install backend dependencies by running:
+
+     ```bash
+     npm install
+     ```
+
+   - Start the Node.js server in development mode with:
+
+     ```bash
+     npm run dev
+     ```
+
+   - The backend server will be available at [http://localhost:8000](http://localhost:8000).
 
 Make sure to configure your MongoDB connection settings and JWT secret in the backend's configuration files (not included in this template).
 
