@@ -1,1 +1,1 @@
-export const API_URL='http://localhost:8000'
+export const API_URL='https://mern-crud-7b9d.onrender.com'
