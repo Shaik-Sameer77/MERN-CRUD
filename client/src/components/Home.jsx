@@ -52,7 +52,13 @@ const Home = () => {
           type="button"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
-          className="btn btn-outline-light"
+          className="btn btn-outline-light "
+
+          style={{
+            background: "lightgreen",
+            border: "1px solid lightgreen",
+            color: "white",
+          }}
         >
           Add
         </button>

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { createTodoApi } from "../../services/api.js";
-import {  toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function AddTodoModal({setRefreshList}) {
+function AddTodoModal({ setRefreshList }) {
   const [todoDesc, setTodoDesc] = useState("");
 
   const handleTodoSubmit = async () => {
@@ -12,10 +12,10 @@ function AddTodoModal({setRefreshList}) {
       toast("Todo is required");
     }
     const result = await createTodoApi({ desc: todoDesc });
-    console.log(result)
+    console.log(result);
     if (result.status === 200 && result.data.status === 200) {
       toast("Todo Added");
-      setRefreshList(new Date())
+      setRefreshList(new Date());
       setTodoDesc("");
     } else {
       toast(result.data.message);
@@ -24,7 +24,6 @@ function AddTodoModal({setRefreshList}) {
 
   return (
     <div className="modal mt-5" id="exampleModal">
-      
       <div className="modal-dialog" role="document">
         <div className="modal-content">
           <div className="modal-header">
@@ -38,7 +37,7 @@ function AddTodoModal({setRefreshList}) {
                 setTodoDesc("");
               }}
             >
-              <span arial-hidden="true"></span>
+              <span aria-hidden="true"></span>
             </button>
           </div>
           <div className="modal-body">
@@ -47,6 +46,7 @@ function AddTodoModal({setRefreshList}) {
                 name=""
                 className="form-control"
                 rows={3}
+                value={todoDesc}
                 onChange={(e) => {
                   setTodoDesc(e.target.value);
                 }}
@@ -64,7 +64,11 @@ function AddTodoModal({setRefreshList}) {
             >
               Close
             </button>
-            <button className="btn btn-secondary" onClick={handleTodoSubmit} data-bs-dismiss="modal">
+            <button
+              className="btn btn-secondary"
+              onClick={handleTodoSubmit}
+              data-bs-dismiss="modal"
+            >
               Save Todo
             </button>
           </div>

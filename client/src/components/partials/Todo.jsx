@@ -37,6 +37,10 @@ function Todo({ todo, setRefreshList }) {
     }
   };
 
+  const headerStyle = {
+    color: todo.isCompleted ? "green" : "red",
+  };
+
   const textStyle = {
     textDecoration: todo.isCompleted ? "line-through" : "none",
   };
@@ -46,7 +50,7 @@ function Todo({ todo, setRefreshList }) {
       className="card bg-light mx-4 my-3 "
       style={{ maxWidth: "24rem", minHeight: "13rem" }}
     >
-      <div className="card-header">
+      <div className="card-header" style={headerStyle}>
         {todo.isCompleted ? "Completed" : "Not Completed"}
       </div>
       <div className="card-body">

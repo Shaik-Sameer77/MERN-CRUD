@@ -15,11 +15,10 @@ function EditTodoModal({ todo, setRefreshList, closeModal, modalId }) {
       todo_id: todo._id,
       desc: editedDesc,
     });
-    console.log(result)
+    console.log(result);
     if (result.status === 200) {
       toast("Todo Updated");
       setRefreshList(new Date());
-      setEditedDesc(""); 
     } else {
       toast(result.data.message);
     }
@@ -55,9 +54,6 @@ function EditTodoModal({ todo, setRefreshList, closeModal, modalId }) {
               type="button"
               className="btn btn-secondary"
               data-bs-dismiss="modal"
-              onClick={() => {
-                setEditedDesc("");
-              }}
             >
               Close
             </button>
