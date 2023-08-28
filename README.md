@@ -11,6 +11,7 @@ This is a simple MERN (MongoDB, Express.js, React, Node.js) stack project templa
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Styling](#styling)
+- [Deployment](#deployment)
 
 ## Project Structure
 
@@ -106,5 +107,9 @@ Make sure to configure your MongoDB connection settings and JWT secret in the ba
 ## Styling
 
 For styling, this project uses Bootstrap Morph. Additional CSS files or styling libraries can be added as needed to customize the appearance of your application.
+
+## Deployment
+
+The project is deployed and accessible online. You can access it [here](https://master--rainbow-naiad-07db09.netlify.app/login).
 
 This project template provides a solid foundation for building a full-stack web application using the MERN stack. You can expand upon it by adding more features, enhancing the user interface, and deploying it to a hosting platform of your choice.
