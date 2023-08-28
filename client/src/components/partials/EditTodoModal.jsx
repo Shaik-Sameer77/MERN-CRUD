@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { updateTodoApi } from "../../services/api.js";
 import { toast } from "react-toastify";
 
-function EditTodoModal({ todo, setRefreshList, closeModal, modalId }) {
+function EditTodoModal({ todo, setRefreshList, modalId }) {
   const [editedDesc, setEditedDesc] = useState(todo.desc);
 
   const handleEditSubmit = async () => {
     if (editedDesc === "") {
+      setEditedDesc(todo.desc);
       toast("Todo description is required");
       return;
     }
@@ -24,6 +25,12 @@ function EditTodoModal({ todo, setRefreshList, closeModal, modalId }) {
     }
   };
 
+  const handleClose = () => {
+    if (editedDesc === "") {
+      setEditedDesc(todo.desc); 
+    }
+  };
+
   return (
     <div className="modal" id={modalId} tabIndex="-1">
       <div className="modal-dialog">
@@ -35,7 +42,7 @@ function EditTodoModal({ todo, setRefreshList, closeModal, modalId }) {
               className="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
-              onClick={closeModal}
+              onClick={handleClose}
             ></button>
           </div>
           <div className="modal-body">
@@ -54,6 +61,7 @@ function EditTodoModal({ todo, setRefreshList, closeModal, modalId }) {
               type="button"
               className="btn btn-secondary"
               data-bs-dismiss="modal"
+              onClick={handleClose}
             >
               Close
             </button>
