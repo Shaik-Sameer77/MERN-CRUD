@@ -33,7 +33,7 @@ function Todo({ todo, setRefreshList }) {
       setRefreshList(new Date());
       toast(result.data.message);
     } else {
-      toast("Failed to Mark, please try again");
+      toast("Failed to Mark");
     }
   };
 
