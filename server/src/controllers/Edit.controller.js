@@ -25,9 +25,6 @@ export const EditTodo = async (req, res) => {
       {
         desc: req.body.desc, // Updated description
       },
-      {
-        new: true, // Return the updated todo
-      }
     );
 
     if (updatedTodo) {
