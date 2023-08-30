@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Header = () => {
+const Header = ({setRefreshList}) => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
 
@@ -14,6 +14,7 @@ const Header = () => {
     localStorage.removeItem("user");
     setUser(null);
     navigate("/login");
+    setRefreshList(new Date());
   };
 
   

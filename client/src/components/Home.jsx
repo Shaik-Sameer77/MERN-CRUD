@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <div>
-      <Header />
+      <Header setRefreshList={setRefreshList}/>
       <ToastContainer/>
       <div className="container">
         <div className="row justify-content-center mt-4">
