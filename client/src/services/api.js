@@ -55,7 +55,7 @@ export const updateTodoApi = async ({ todo_id, desc }) => {
   
     try {
       const response = await axios.put(
-        `${UPDATE_TODO}/${todo_id}`, // Use the correct URL with the todo_id parameter
+        `${UPDATE_TODO}/${todo_id}`,
         {
           desc,
         },
