@@ -110,6 +110,6 @@ For styling, this project uses Bootstrap Morph. Additional CSS files or styling 
 
 ## Deployment
 
-The project is deployed and accessible online. You can access it [here](https://master--rainbow-naiad-07db09.netlify.app/login).
+The project is deployed and accessible online. You can access it [here](https://rainbow-naiad-07db09.netlify.app/).
 
 This project template provides a solid foundation for building a full-stack web application using the MERN stack. You can expand upon it by adding more features, enhancing the user interface, and deploying it to a hosting platform of your choice.
